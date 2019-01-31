@@ -2,12 +2,35 @@
     <head>
         <title>paint maker</title>
     </head>
+    
+    <style>
+        div {height:50px;width:50px;background-color: blue;}
+    </style>
 
     <body>
-        
+        <table>
+            <tr>
+                <td><div></div></td>
+                <td><div></div></td>
+            </tr>
+            <tr>
+                <td><div></div></td>
+                <td><div></div></td>
+            </tr>
+        </table>
     </body>
 
     <script>
-    
+        const divs = document.querySelectorAll("div");
+        console.log(divs);
+        divs.forEach(function(oneDiv, index) {
+            oneDiv.addEventListener('click', function() {
+                oneDiv.style.backgroundColor = "black";
+            });
+        });
+
+        function clickHandler() {
+            divs.style.backgroundColor = "black";
+        }
     </script>
 </html>
